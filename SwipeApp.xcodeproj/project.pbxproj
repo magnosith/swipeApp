@@ -16,6 +16,8 @@
 		DDBD632D27DFBB9C0049E740 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD632C27DFBB9C0049E740 /* OnboardingView.swift */; };
 		DDBD632F27DFBBA80049E740 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBD632E27DFBBA80049E740 /* HomeView.swift */; };
 		DDC7ED2127EC1CDD005C0D83 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7ED2027EC1CDD005C0D83 /* CircleGroupView.swift */; };
+		DDC7ED2327ECB38B005C0D83 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7ED2227ECB38B005C0D83 /* AudioPlayer.swift */; };
+		DDC7ED2527ECBE18005C0D83 /* NavigationBarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7ED2427ECBE18005C0D83 /* NavigationBarDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DDBD632C27DFBB9C0049E740 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DDBD632E27DFBBA80049E740 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DDC7ED2027EC1CDD005C0D83 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		DDC7ED2227ECB38B005C0D83 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DDC7ED2427ECBE18005C0D83 /* NavigationBarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DDC7ED2027EC1CDD005C0D83 /* CircleGroupView.swift */,
+				DDC7ED2427ECBE18005C0D83 /* NavigationBarDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		DDBD632A27DFB1860049E740 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DDC7ED2227ECB38B005C0D83 /* AudioPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -189,10 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC7ED2127EC1CDD005C0D83 /* CircleGroupView.swift in Sources */,
+				DDC7ED2527ECBE18005C0D83 /* NavigationBarDetail.swift in Sources */,
 				DDBD632D27DFBB9C0049E740 /* OnboardingView.swift in Sources */,
 				DDBD632F27DFBBA80049E740 /* HomeView.swift in Sources */,
 				DDBD631827DF9FFF0049E740 /* ContentView.swift in Sources */,
 				DDBD631627DF9FFF0049E740 /* SwipeAppApp.swift in Sources */,
+				DDC7ED2327ECB38B005C0D83 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

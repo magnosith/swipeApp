@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  SwipeApp
 //
-//  Created by magnodev on 14/03/22.
+//  Created by magnodev 
 //
 
 import SwiftUI
@@ -11,18 +11,37 @@ import SwiftUI
 
 
 struct HomeView: View {
-    //: MARK - PROPERTY
+    // MARK: - PROPERTY
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     @State private var isAnimating: Bool = false
+    @State private var textTitle: String = "Meditar."
+    
+    let haptitcFeedback = UINotificationFeedbackGenerator()
 
     //BODY
     var body: some View {
+        
         VStack(spacing: 20){
                 //MARK: - HEADER
+            NavigationBarDetail()
+                .padding(.horizontal)
+    
+            VStack {
+                Text(textTitle)
+                    .font(.system(size: 45))
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("ColorBlue"))
+                    .transition(.opacity)
+                .id(textTitle)
+            
+            }
+            .opacity(isAnimating ? 1 : 0)
+            .offset(y: isAnimating ? 0 : -40)
+            .animation(.easeOut(duration: 1), value: isAnimating)
             
             Spacer()
             ZStack {
-                
+        
                 CircleGroupView(ShapeColor: .gray, ShapeOpacity: 0.1)
                 Image("character-2")
                     .resizable()
@@ -36,7 +55,7 @@ struct HomeView: View {
             
             //MARK: - CENTER
             
-            Text("The time that leads to mastery is dependet on the intensity of out focus.")
+            Text("Importância de meditar, pensar sobre si, autoconhecimento faz você sentir-se mais leve e com um humor lá em cima")
                 .font(.title3)
                 .fontWeight(.light)
                 .foregroundColor(.secondary)
@@ -50,6 +69,8 @@ struct HomeView: View {
             Button(action: {
                 //Some Action
                 withAnimation{
+                    haptitcFeedback.notificationOccurred(.success)
+                    playSound(sound: "success", type: "m4a")
                     isOnboardingViewActive = true
                 }
             }){
@@ -57,7 +78,7 @@ struct HomeView: View {
                 Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                     .imageScale(.large)
                 
-                Text("Restart")
+                Text("Reiniciar")
                     .font(.system(.title3, design: .rounded))
                     .fontWeight(.bold)
                 

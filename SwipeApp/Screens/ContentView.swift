@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  SwipeApp
 //
-//  Created by magnodev on 14/03/22.
+//  Created by magnodev 
 //
 
 import SwiftUI
